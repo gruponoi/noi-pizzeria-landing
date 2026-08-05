@@ -1,4 +1,5 @@
-import { whatsappUrl } from '../data/siteContent'
+import VisualAsset from './VisualAsset'
+import { visualAssets, whatsappUrl } from '../data/siteContent'
 
 function Promotion() {
   return (
@@ -6,6 +7,9 @@ function Promotion() {
       <div className="container">
         <div className="promo__card">
           <div className="promo__badge">LA FAVORITA<br />DE LOJA</div>
+          <VisualAsset asset={visualAssets.promotion} className="promo__media">
+            <div className="promo__media-mark"><strong>2 + 1</strong><span>EL PLAN COMPLETO</span></div>
+          </VisualAsset>
           <div className="promo__copy">
             <p className="eyebrow">Promoción principal</p>
             <h2>El plan perfecto<br />para compartir</h2>

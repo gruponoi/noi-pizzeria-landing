@@ -1,11 +1,14 @@
 import { useState } from 'react'
-import { navigation, whatsappUrl } from '../data/siteContent'
+import VisualAsset from './VisualAsset'
+import { navigation, visualAssets, whatsappUrl } from '../data/siteContent'
 
 function Brand() {
   return (
     <a className="brand" href="#inicio" aria-label="Noi Pizzería, ir al inicio">
-      <span className="brand__mark" aria-hidden="true"><span>N</span></span>
-      <span className="brand__text"><strong>NOI</strong><small>PIZZERÍA</small></span>
+      <VisualAsset asset={visualAssets.logo} className="brand__asset">
+        <span className="brand__mark"><span>N</span></span>
+        <span className="brand__text"><strong>NOI</strong><small>PIZZERÍA</small></span>
+      </VisualAsset>
     </a>
   )
 }

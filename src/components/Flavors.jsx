@@ -1,4 +1,5 @@
 import SectionHeading from './SectionHeading'
+import VisualAsset from './VisualAsset'
 import { flavors, whatsappUrl } from '../data/siteContent'
 
 function Flavors() {
@@ -9,10 +10,10 @@ function Flavors() {
         <div className="flavors__grid">
           {flavors.map((flavor, index) => (
             <article className={`flavor-card flavor-card--${flavor.accent}`} key={flavor.name}>
-              <div className="flavor-card__visual" aria-hidden="true">
+              <VisualAsset asset={flavor.image} className="flavor-card__visual">
                 <span>{flavor.icon}</span>
                 <b>0{index + 1}</b>
-              </div>
+              </VisualAsset>
               <div className="flavor-card__content">
                 <h3>{flavor.name}</h3>
                 <p>{flavor.description}</p>

@@ -1,4 +1,5 @@
-import { navigation, whatsappNumber, whatsappUrl } from '../data/siteContent'
+import VisualAsset from './VisualAsset'
+import { navigation, visualAssets, whatsappNumber, whatsappUrl } from '../data/siteContent'
 
 function Footer() {
   return (
@@ -9,7 +10,12 @@ function Footer() {
         <a className="button button--primary" href={whatsappUrl} target="_blank" rel="noreferrer">Hacer mi pedido <span aria-hidden="true">↗</span></a>
       </div>
       <div className="container footer__main">
-        <div className="footer__brand"><strong>NOI</strong><span>PIZZERÍA</span><small>Porque Loja se lo merece.</small></div>
+        <div className="footer__brand">
+          <VisualAsset asset={visualAssets.logo} className="footer__logo">
+            <strong>NOI</strong><span>PIZZERÍA</span>
+          </VisualAsset>
+          <small>Porque Loja se lo merece.</small>
+        </div>
         <div><h3>Explora</h3>{navigation.slice(0, 4).map((item) => <a key={item.href} href={item.href}>{item.label}</a>)}</div>
         <div><h3>Servicio</h3><p>Delivery en Loja</p><p>Hasta las 22:00</p><p>Envío según ubicación</p></div>
         <div><h3>Pedidos</h3><a href={whatsappUrl} target="_blank" rel="noreferrer">+{whatsappNumber.slice(0, 3)} {whatsappNumber.slice(3, 6)} {whatsappNumber.slice(6, 9)} {whatsappNumber.slice(9)}</a><p>Solo atención por delivery</p></div>

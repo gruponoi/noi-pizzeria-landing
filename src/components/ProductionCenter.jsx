@@ -1,15 +1,16 @@
 import SectionHeading from './SectionHeading'
-import { whatsappUrl } from '../data/siteContent'
+import VisualAsset from './VisualAsset'
+import { visualAssets, whatsappUrl } from '../data/siteContent'
 
 function ProductionCenter() {
   return (
     <section className="production section" id="nosotros">
       <div className="container production__grid">
-        <div className="production__visual" aria-hidden="true">
+        <VisualAsset asset={visualAssets.productionCenter} className="production__visual">
           <div className="production__stamp"><strong>NOI</strong><span>HECHO EN LOJA</span></div>
           <div className="production__lines" />
           <p>Centro de<br />producción</p>
-        </div>
+        </VisualAsset>
         <div className="production__content">
           <SectionHeading eyebrow="Así trabajamos" title={<>Sin mesas.<br /><em>Con todo el sabor.</em></>} />
           <p>Somos una dark kitchen: un centro de producción diseñado para concentrarnos en lo importante — preparar pizzas deliciosas y entregarlas en tu puerta.</p>

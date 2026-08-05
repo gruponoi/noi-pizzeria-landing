@@ -1,8 +1,9 @@
-import { whatsappUrl } from '../data/siteContent'
+import VisualAsset from './VisualAsset'
+import { visualAssets, whatsappUrl } from '../data/siteContent'
 
 function PizzaArtwork() {
   return (
-    <div className="pizza-stage" aria-label="Espacio reservado para una futura fotografía de las pizzas de Noi">
+    <VisualAsset asset={visualAssets.hero} className="pizza-stage" imageClassName="pizza-stage__photo" eager>
       <div className="pizza-stage__glow" />
       <div className="pizza-stage__plate">
         <div className="pizza-illustration" aria-hidden="true">
@@ -16,7 +17,7 @@ function PizzaArtwork() {
         </div>
       </div>
       <p className="pizza-stage__note">Preparadas al momento · entregadas calientes</p>
-    </div>
+    </VisualAsset>
   )
 }
 
