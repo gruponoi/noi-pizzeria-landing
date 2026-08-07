@@ -27,12 +27,12 @@
 
 .visual-asset { position: relative; overflow: hidden; }
 .visual-asset__fallback { position: relative; width: 100%; height: 100%; transition: opacity .3s ease; }
-.visual-asset__image { position: absolute; z-index: 5; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .35s ease; }
+.visual-asset__image { position: absolute; z-index: 5; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .35s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
 .visual-asset--loaded > .visual-asset__image { opacity: 1; }
 .visual-asset--loaded > .visual-asset__fallback { opacity: 0; pointer-events: none; }
 .visual-asset__label { position: absolute; z-index: 4; right: 1rem; bottom: 1rem; max-width: calc(100% - 2rem); padding: .55rem .7rem; border: 1px solid rgba(215,176,91,.55); color: var(--gold); background: rgba(9,9,9,.88); font-size: .5rem; font-weight: 850; line-height: 1.35; letter-spacing: .13em; text-align: center; text-transform: uppercase; }
 
-.header { position: absolute; z-index: 50; top: 0; left: 0; width: 100%; border-bottom: 1px solid rgba(255,255,255,.1); background: linear-gradient(to bottom, rgba(5,5,5,.72), rgba(5,5,5,.18)); backdrop-filter: blur(10px); }
+.header { position: fixed; z-index: 50; top: 0; left: 0; width: 100%; border-bottom: 1px solid rgba(255,255,255,.1); background: rgba(7,7,7,.72); box-shadow: 0 1px 0 transparent; backdrop-filter: blur(10px); transition: background-color .3s ease, box-shadow .3s ease, border-color .3s ease; }
 .header__inner { display: flex; min-height: 4.75rem; align-items: center; justify-content: space-between; }
 .brand { display: inline-flex; align-items: center; gap: .65rem; color: var(--white); text-decoration: none; transition: transform .25s ease, filter .25s ease; }
 .brand:hover { transform: translateY(-1px); filter: brightness(1.05); }
@@ -187,6 +187,56 @@
 .whatsapp-float { position: fixed; z-index: 45; right: 1rem; bottom: 1rem; display: flex; height: 3.4rem; align-items: center; gap: .55rem; padding: 0 1rem; border-radius: 2rem; color: #fff; background: #25d366; box-shadow: 0 10px 28px #0008; text-decoration: none; font-size: .73rem; font-weight: 900; text-transform: uppercase; transition: transform .2s; }
 .whatsapp-float:hover { transform: translateY(-3px); }.whatsapp-float svg { width: 1.35rem; fill: currentColor; }
 
+@keyframes premium-reveal {
+  from { opacity: 0; transform: translateY(1.5rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes header-refine {
+  from { background-color: rgba(7,7,7,.58); border-color: rgba(255,255,255,.1); box-shadow: 0 1px 0 transparent; }
+  to { background-color: rgba(7,7,7,.94); border-color: rgba(215,176,91,.2); box-shadow: 0 12px 32px rgba(0,0,0,.3); }
+}
+
+@supports (animation-timeline: view()) {
+  .section-heading,
+  .promo__card,
+  .production__visual,
+  .production__content,
+  .faq__list,
+  .footer__cta { animation: premium-reveal linear both; animation-timeline: view(); animation-range: entry 8% cover 30%; }
+  .flavor-card,
+  .quote-card { animation: premium-reveal linear both; animation-timeline: view(); animation-range: entry 5% cover 25%; }
+}
+
+@supports (animation-timeline: scroll()) {
+  .header { animation: header-refine linear both; animation-timeline: scroll(root block); animation-range: 0 180px; }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .pizza-stage:hover .pizza-stage__photo { transform: scale(1.025); }
+  .promo__media:hover .visual-asset__image { transform: scale(1.035); }
+  .production__visual:hover .visual-asset__image { transform: scale(1.025); }
+  .button:active, .whatsapp-float:active { transform: translateY(0) scale(.985); }
+  .quote-card blockquote { transition: color .3s ease; }
+  .quote-card:hover blockquote { color: var(--white); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header,
+  .section-heading,
+  .promo__card,
+  .production__visual,
+  .production__content,
+  .faq__list,
+  .footer__cta,
+  .flavor-card,
+  .quote-card { animation: none !important; }
+  .pizza-stage:hover .pizza-stage__photo,
+  .promo__media:hover .visual-asset__image,
+  .production__visual:hover .visual-asset__image { transform: none; }
+  .flavor-card:hover .flavor-card__visual .visual-asset__image { transform: scale(1.015); }
+}
+
 @media (min-width: 620px) {
   .container { width: min(100% - 3rem, 1180px); }
   .section { padding: 6rem 0; }
@@ -205,7 +255,7 @@
 
 @media (min-width: 900px) {
   .section { padding: 8rem 0; }
-  .header { position: absolute; }
+  .header { position: fixed; }
   .brand__asset { width: 11rem; height: 3.5rem; }
   .menu-toggle { display: none; }
   .nav { position: static; display: flex; width: auto; align-items: center; gap: 1.4rem; padding: 0; border: 0; background: transparent; }
