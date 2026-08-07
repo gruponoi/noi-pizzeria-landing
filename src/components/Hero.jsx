@@ -28,7 +28,7 @@ function Hero() {
       <div className="container hero__inner">
         <div className="hero__content">
           <p className="eyebrow"><span /> Dark kitchen · Loja</p>
-          <h1>La pizza que<br /><em>Loja merece.</em></h1>
+          <h1>Porque Loja<br /><em>se lo merece.</em></h1>
           <p className="hero__lead">Masa crocante, ingredientes generosos y ese sabor que convierte cualquier noche en un buen plan.</p>
           <div className="hero__actions">
             <a className="button button--primary" href={whatsappUrl} target="_blank" rel="noreferrer">Pedir por WhatsApp <span aria-hidden="true">↗</span></a>

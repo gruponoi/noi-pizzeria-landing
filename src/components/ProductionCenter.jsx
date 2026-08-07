@@ -12,7 +12,7 @@ function ProductionCenter() {
           <p>Centro de<br />producción</p>
         </VisualAsset>
         <div className="production__content">
-          <SectionHeading eyebrow="Así trabajamos" title={<>Sin mesas.<br /><em>Con todo el sabor.</em></>} />
+          <SectionHeading eyebrow="Así trabajamos" title={<>Centro de producción.<br /><em>Todo el sabor directo a tu puerta.</em></>} />
           <p>Somos una dark kitchen: un centro de producción diseñado para concentrarnos en lo importante — preparar pizzas deliciosas y entregarlas en tu puerta.</p>
           <ul>
             <li><span>01</span><div><strong>Preparación al momento</strong><small>Tu pedido entra, encendemos el horno y comienza la magia.</small></div></li>
