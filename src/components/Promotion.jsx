@@ -26,6 +26,16 @@ function Promotion() {
             <a className="button button--light" href={whatsappUrl} target="_blank" rel="noreferrer">Quiero esta promo <span aria-hidden="true">→</span></a>
           </div>
         </div>
+        <div className="promo__choices">
+          <p className="promo__choices-title"><span aria-hidden="true">✓</span> Elige cualquier combinación:</p>
+          <ul>
+            <li><span aria-hidden="true">🍕</span> Pepperoni</li>
+            <li><span aria-hidden="true">🍍</span> Hawaiana</li>
+            <li><span aria-hidden="true">🥓</span> Tocino</li>
+            <li><span aria-hidden="true">🍖</span> Jamón</li>
+          </ul>
+          <p className="promo__choices-note">Tú decides los dos sabores.</p>
+        </div>
         <p className="promo__shipping">Costo de envío según ubicación · Consulta cobertura por WhatsApp</p>
       </div>
     </section>

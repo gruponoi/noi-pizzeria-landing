@@ -62,6 +62,9 @@
 .hero__lead { max-width: 520px; margin: 1.65rem 0 0; color: #cdc7bd; font-size: clamp(1rem, 2.4vw, 1.08rem); line-height: 1.75; }
 .hero__actions { display: flex; align-items: center; gap: 1.25rem; margin-top: 2rem; flex-wrap: wrap; }
 .hero__actions .button { width: 100%; }
+.hero__benefits { display: grid; gap: .7rem; margin: 1.75rem 0 0; padding: 1.15rem 0; border-block: 1px solid rgba(255,255,255,.1); list-style: none; }
+.hero__benefits li { display: flex; align-items: center; gap: .65rem; color: #c8c2b8; font-size: .72rem; font-weight: 750; line-height: 1.4; }
+.hero__benefits li span { display: grid; width: 1.8rem; height: 1.8rem; flex: 0 0 auto; place-items: center; border: 1px solid rgba(215,176,91,.25); border-radius: 50%; background: rgba(215,176,91,.055); font-size: .85rem; }
 .hero__meta { display: flex; gap: 1.2rem; margin-top: 2rem; color: #bdb8ae; font-size: .75rem; flex-wrap: wrap; }
 .hero__meta span { display: flex; align-items: center; gap: .45rem; }
 .hero__meta i { color: var(--gold); font-style: normal; font-size: 1rem; }
@@ -83,6 +86,13 @@
 .hero__marquee { position: absolute; bottom: 0; left: -2%; width: 104%; overflow: hidden; padding: .85rem 0; color: #17110b; background: var(--gold); font-size: .65rem; font-weight: 900; letter-spacing: .16em; white-space: nowrap; transform: rotate(-1.5deg); }
 .hero__marquee div { width: max-content; }
 .hero__marquee span { margin: 0 1.5rem; color: var(--red-dark); }
+
+.trust { border-bottom: 1px solid #282622; background: radial-gradient(circle at 50% 0, rgba(215,176,91,.055), transparent 38%), #0d0d0c; }
+.trust__grid { display: grid; gap: .8rem; }
+.trust-card { display: grid; min-height: 155px; align-content: center; justify-items: center; gap: 1rem; padding: 1.5rem; border: 1px solid #302e2a; background: linear-gradient(145deg, rgba(255,255,255,.025), transparent); text-align: center; box-shadow: 0 16px 38px rgba(0,0,0,.14); transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease; }
+.trust-card:hover { transform: translateY(-4px); border-color: rgba(215,176,91,.4); box-shadow: 0 24px 48px rgba(0,0,0,.28); }
+.trust-card__icon { display: grid; width: 2.8rem; height: 2.8rem; place-items: center; border: 1px solid rgba(215,176,91,.32); border-radius: 50%; background: rgba(215,176,91,.06); font-size: 1.25rem; }
+.trust-card h3 { max-width: 190px; margin: 0; color: var(--cream); font-family: Georgia, "Times New Roman", serif; font-size: 1.08rem; font-weight: 400; line-height: 1.3; }
 
 .promo { color: var(--white); background: radial-gradient(circle at 15% 10%, rgba(215,176,91,.055), transparent 34%), #121110; }
 .promo__card { position: relative; overflow: hidden; padding: 2.3rem 1.4rem; border: 1px solid rgba(255,255,255,.12); background: linear-gradient(135deg, #d83229, #a81713); box-shadow: 0 30px 80px rgba(0,0,0,.48); }
@@ -106,6 +116,14 @@
 .promo__price > strong { font-family: Georgia, serif; font-size: 6rem; font-weight: 400; line-height: 1; letter-spacing: -.08em; }
 .promo__price sup { font-size: 2rem; }.promo__price small { font-size: 2.4rem; }
 .promo__price .button { width: 100%; margin-top: .8rem; }
+.promo__choices { display: grid; gap: 1.25rem; margin-top: 1.25rem; padding: 1.35rem; border: 1px solid #302e2a; background: linear-gradient(135deg, rgba(255,255,255,.035), rgba(215,176,91,.025)); box-shadow: 0 18px 45px rgba(0,0,0,.16); }
+.promo__choices-title, .promo__choices-note { margin: 0; }
+.promo__choices-title { display: flex; align-items: center; gap: .65rem; color: var(--cream); font-family: Georgia, "Times New Roman", serif; font-size: 1.15rem; }
+.promo__choices-title span { display: grid; width: 1.6rem; height: 1.6rem; flex: 0 0 auto; place-items: center; border: 1px solid rgba(215,176,91,.55); border-radius: 50%; color: var(--gold); font-family: Inter, sans-serif; font-size: .72rem; }
+.promo__choices ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .65rem 1rem; margin: 0; padding: 0; list-style: none; }
+.promo__choices li { display: flex; align-items: center; gap: .55rem; color: #c9c3b9; font-size: .8rem; font-weight: 750; }
+.promo__choices li span { font-size: 1rem; }
+.promo__choices-note { padding-top: 1rem; border-top: 1px solid #302e2a; color: var(--gold); font-size: .72rem; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
 .promo__shipping { margin: 1.25rem 0 0; color: #77736d; font-size: .68rem; letter-spacing: .05em; text-align: center; }
 
 .flavors { background: radial-gradient(circle at 85% 15%, rgba(215,176,91,.045), transparent 32%), var(--black); }
@@ -168,6 +186,13 @@
 .faq__list details[open] summary i { transform: rotate(45deg); }
 .faq__list details > p { margin: -.25rem 2.25rem 1.5rem 2.75rem; color: #969189; font-size: .9rem; line-height: 1.7; }
 
+.final-cta { border-top: 1px solid #2d2b27; background: radial-gradient(circle at 50% 50%, rgba(168,23,19,.14), transparent 48%), #0d0d0c; }
+.final-cta__inner { display: grid; justify-items: center; max-width: 760px; padding-block: 1rem; text-align: center; }
+.final-cta__inner .eyebrow { justify-content: center; }
+.final-cta h2 { margin: 0; color: var(--white); font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.8rem, 12vw, 5.5rem); font-weight: 400; line-height: .92; letter-spacing: -.05em; }
+.final-cta__inner > p:not(.eyebrow) { max-width: 520px; margin: 1.35rem 0 0; color: var(--muted); line-height: 1.7; }
+.final-cta .button { margin-top: 2rem; }
+
 .footer { border-top: 1px solid #302e2a; background: #0c0c0b; }
 .footer__cta { padding-block: 5.5rem; text-align: center; }
 .footer__cta .eyebrow { justify-content: center; }
@@ -205,7 +230,8 @@
   .faq__list,
   .footer__cta { animation: premium-reveal linear both; animation-timeline: view(); animation-range: entry 8% cover 30%; }
   .flavor-card,
-  .quote-card { animation: premium-reveal linear both; animation-timeline: view(); animation-range: entry 5% cover 25%; }
+  .quote-card,
+  .trust-card { animation: premium-reveal linear both; animation-timeline: view(); animation-range: entry 5% cover 25%; }
 }
 
 @supports (animation-timeline: scroll()) {
@@ -230,7 +256,8 @@
   .faq__list,
   .footer__cta,
   .flavor-card,
-  .quote-card { animation: none !important; }
+  .quote-card,
+  .trust-card { animation: none !important; }
   .pizza-stage:hover .pizza-stage__photo,
   .promo__media:hover .visual-asset__image,
   .production__visual:hover .visual-asset__image { transform: none; }
@@ -242,12 +269,16 @@
   .section { padding: 6rem 0; }
   .brand__asset { width: 10.5rem; height: 3.4rem; }
   .hero__actions .button { width: auto; }
+  .hero__benefits { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .promo__card { padding: 3rem; }
   .promo__media { max-height: 440px; }
+  .promo__choices { padding: 1.4rem 1.75rem; }
+  .promo__choices ul { grid-template-columns: repeat(4, auto); }
   .promo__deal { display: flex; align-items: center; justify-content: center; gap: 1.5rem; }
   .promo__deal > span { display: inline; }
   .promo__price .button { width: auto; }
   .flavors__grid, .testimonials__grid { grid-template-columns: repeat(2, 1fr); }
+  .trust__grid { grid-template-columns: repeat(2, 1fr); }
   .flavor-card { min-height: 410px; }
   .footer__main { grid-template-columns: 1.5fr 1fr 1fr; }
   .footer__brand { grid-column: 1 / -1; }
@@ -275,7 +306,11 @@
   .promo__deal { grid-column: 2; grid-row: 2; align-self: start; display: flex; margin: 0; padding: 1.25rem 0 0; border-top: 1px solid rgba(255,255,255,.25); border-bottom: 0; text-align: left; }
   .promo__deal > span { display: block; }
   .promo__price { grid-column: 3; grid-row: 1 / 3; padding-left: 2rem; border-left: 1px solid rgba(255,255,255,.25); }
+  .promo__choices { grid-template-columns: auto 1fr auto; align-items: center; gap: 1.5rem; }
+  .promo__choices ul { justify-content: center; }
+  .promo__choices-note { padding-top: 0; padding-left: 1.5rem; border-top: 0; border-left: 1px solid #302e2a; white-space: nowrap; }
   .flavors__grid { grid-template-columns: repeat(4, 1fr); }
+  .trust__grid { grid-template-columns: repeat(4, 1fr); }
   .flavor-card:nth-child(even) { transform: translateY(2rem); }
   .flavor-card:nth-child(even):hover { transform: translateY(calc(2rem - 6px)); }
   .production__grid { grid-template-columns: .92fr 1.08fr; align-items: center; gap: clamp(4rem, 8vw, 8rem); }

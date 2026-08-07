@@ -54,20 +54,31 @@ export const navigation = [
 ]
 
 export const flavors = [
-  { name: 'Pepperoni', description: 'Clásica, intensa y con una capa generosa de queso.', accent: 'pepperoni', icon: '●', image: visualAssets.pepperoni },
-  { name: 'Hawaiana', description: 'El balance irresistible entre jamón, piña y queso.', accent: 'hawaiian', icon: '◆', image: visualAssets.hawaiian },
-  { name: 'Jamón', description: 'Suave, familiar y perfecta para compartir.', accent: 'ham', icon: '■', image: visualAssets.ham },
-  { name: 'Tocino', description: 'Sabor ahumado y crocante en cada porción.', accent: 'bacon', icon: '≈', image: visualAssets.bacon },
+  { name: 'Pepperoni', description: '42 pepperonis perfectamente distribuidos sobre abundante mozzarella gratinada.', accent: 'pepperoni', icon: '●', image: visualAssets.pepperoni },
+  { name: 'Hawaiana', description: 'Jamón de calidad, piña dulce y mozzarella gratinada en cada porción.', accent: 'hawaiian', icon: '◆', image: visualAssets.hawaiian },
+  { name: 'Jamón', description: 'Jamón seleccionado, abundante queso y una masa suave por dentro, crujiente por fuera.', accent: 'ham', icon: '■', image: visualAssets.ham },
+  { name: 'Tocino', description: 'Tocino crujiente, mozzarella gratinada y un sabor intenso en cada bocado.', accent: 'bacon', icon: '≈', image: visualAssets.bacon },
 ]
 
 export const testimonials = [
-  'Llegaron calientitas y con bastante queso.',
-  'La masa estaba crocante, no seca.',
-  'La hawaiana es la mejor.',
-  'Excelente atención y llegó rapidísimo.',
+  'Llegó rápido, muchas gracias. Deliciosas pizzas, la masa suavecita y crujiente y la hawaiana top. Excelente atención.',
+  'Ya recibí mi pedido, muy buenas pizzas. Felicitaciones.',
+  'Excelente. Muy ricas.',
 ]
 
 export const faqs = [
+  {
+    question: '¿Puedo combinar los sabores?',
+    answer: 'Sí. Puedes elegir cualquier combinación entre Pepperoni, Hawaiana, Jamón y Tocino.',
+  },
+  {
+    question: '¿Las pizzas se preparan al momento?',
+    answer: 'Sí. Cada pedido comienza a prepararse una vez confirmado para garantizar calidad y temperatura.',
+  },
+  {
+    question: '¿Realizan entregas en toda Loja?',
+    answer: 'Realizamos delivery en Loja. La cobertura y el costo de envío se confirman según tu ubicación.',
+  },
   {
     question: '¿Tienen un local para comer ahí?',
     answer: 'No. Somos un centro de producción o dark kitchen enfocado en preparar tus pizzas y enviarlas a domicilio. No contamos con atención en un local abierto al público.',
