@@ -1,4 +1,5 @@
 import VisualAsset from './VisualAsset'
+import WhatsAppLink from './WhatsAppLink'
 import { visualAssets, whatsappUrl } from '../data/siteContent'
 
 function PizzaArtwork() {
@@ -31,7 +32,7 @@ function Hero() {
           <h1>Porque Loja<br /><em>se lo merece.</em></h1>
           <p className="hero__lead">Pizzas preparadas al momento en horno de piedra refractaria, con ingredientes seleccionados y delivery en toda Loja.</p>
           <div className="hero__actions">
-            <a className="button button--primary" href={whatsappUrl} target="_blank" rel="noreferrer">Pedir por WhatsApp <span aria-hidden="true">↗</span></a>
+            <WhatsAppLink ctaLocation="hero" ctaLabel="Pedir por WhatsApp" className="button button--primary" href={whatsappUrl} target="_blank" rel="noreferrer">Pedir por WhatsApp <span aria-hidden="true">↗</span></WhatsAppLink>
             <a className="text-link" href="#sabores">Ver sabores <span aria-hidden="true">↓</span></a>
           </div>
           <ul className="hero__benefits" aria-label="Beneficios de Noi Pizzería">

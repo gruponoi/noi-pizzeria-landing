@@ -1,5 +1,6 @@
 import SectionHeading from './SectionHeading'
 import VisualAsset from './VisualAsset'
+import WhatsAppLink from './WhatsAppLink'
 import { visualAssets, whatsappUrl } from '../data/siteContent'
 
 function ProductionCenter() {
@@ -20,7 +21,7 @@ function ProductionCenter() {
             <li><span>03</span><div><strong>Directo a tu ubicación</strong><small>Coordinamos la entrega contigo por WhatsApp.</small></div></li>
           </ul>
           <p className="production__notice">No contamos con atención en un local abierto al público.</p>
-          <a className="button button--outline" href={whatsappUrl} target="_blank" rel="noreferrer">Coordinar mi pedido <span aria-hidden="true">→</span></a>
+          <WhatsAppLink ctaLocation="production_center" ctaLabel="Coordinar mi pedido" className="button button--outline" href={whatsappUrl} target="_blank" rel="noreferrer">Coordinar mi pedido <span aria-hidden="true">→</span></WhatsAppLink>
         </div>
       </div>
     </section>

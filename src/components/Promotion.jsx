@@ -1,4 +1,5 @@
 import VisualAsset from './VisualAsset'
+import WhatsAppLink from './WhatsAppLink'
 import { visualAssets, whatsappUrl } from '../data/siteContent'
 
 function Promotion() {
@@ -23,7 +24,7 @@ function Promotion() {
           <div className="promo__price">
             <span>TODO POR</span>
             <strong><sup>$</sup>12<small>.99</small></strong>
-            <a className="button button--light" href={whatsappUrl} target="_blank" rel="noreferrer">Quiero esta promo <span aria-hidden="true">→</span></a>
+            <WhatsAppLink ctaLocation="promotion" ctaLabel="Quiero esta promo" className="button button--light" href={whatsappUrl} target="_blank" rel="noreferrer">Quiero esta promo <span aria-hidden="true">→</span></WhatsAppLink>
           </div>
         </div>
         <div className="promo__choices">

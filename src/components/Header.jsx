@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import VisualAsset from './VisualAsset'
+import WhatsAppLink from './WhatsAppLink'
 import { navigation, visualAssets, whatsappUrl } from '../data/siteContent'
 
 function Brand() {
@@ -37,9 +38,9 @@ function Header() {
           {navigation.map((item) => (
             <a key={item.href} href={item.href} onClick={closeMenu}>{item.label}</a>
           ))}
-          <a className="button button--small button--primary nav__order" href={whatsappUrl} target="_blank" rel="noreferrer" onClick={closeMenu}>
+          <WhatsAppLink ctaLocation="header" ctaLabel="Pedir ahora" className="button button--small button--primary nav__order" href={whatsappUrl} target="_blank" rel="noreferrer" onClick={closeMenu}>
             Pedir ahora
-          </a>
+          </WhatsAppLink>
         </nav>
       </div>
     </header>

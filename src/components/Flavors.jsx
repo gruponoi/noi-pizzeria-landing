@@ -1,5 +1,6 @@
 import SectionHeading from './SectionHeading'
 import VisualAsset from './VisualAsset'
+import WhatsAppLink from './WhatsAppLink'
 import { flavors, whatsappUrl } from '../data/siteContent'
 
 function Flavors() {
@@ -17,7 +18,7 @@ function Flavors() {
               <div className="flavor-card__content">
                 <h3>{flavor.name}</h3>
                 <p>{flavor.description}</p>
-                <a href={whatsappUrl} target="_blank" rel="noreferrer" aria-label={`Pedir pizza ${flavor.name}`}>Pedir este sabor <span aria-hidden="true">↗</span></a>
+                <WhatsAppLink ctaLocation="flavor_card" ctaLabel={`Pedir ${flavor.name}`} href={whatsappUrl} target="_blank" rel="noreferrer" aria-label={`Pedir pizza ${flavor.name}`}>Pedir este sabor <span aria-hidden="true">↗</span></WhatsAppLink>
               </div>
             </article>
           ))}

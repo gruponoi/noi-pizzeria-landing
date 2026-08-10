@@ -1,4 +1,5 @@
 import SectionHeading from './SectionHeading'
+import WhatsAppLink from './WhatsAppLink'
 import { faqs, whatsappUrl } from '../data/siteContent'
 
 function FAQ() {
@@ -7,7 +8,7 @@ function FAQ() {
       <div className="container faq__grid">
         <div>
           <SectionHeading eyebrow="Antes de pedir" title={<>Preguntas<br /><em>frecuentes.</em></>} description="Si tu duda no está aquí, escríbenos. Estamos para ayudarte." />
-          <a className="text-link text-link--gold" href={whatsappUrl} target="_blank" rel="noreferrer">Hablar con Noi <span aria-hidden="true">↗</span></a>
+          <WhatsAppLink ctaLocation="faq" ctaLabel="Hablar con Noi" className="text-link text-link--gold" href={whatsappUrl} target="_blank" rel="noreferrer">Hablar con Noi <span aria-hidden="true">↗</span></WhatsAppLink>
         </div>
         <div className="faq__list">
           {faqs.map((faq, index) => (
