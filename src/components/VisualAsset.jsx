@@ -1,9 +1,33 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 function VisualAsset({ asset, className = '', imageClassName = '', children, loading = 'lazy' }) {
   const [status, setStatus] = useState('loading')
+  const [isDesktop, setIsDesktop] = useState(false)
+  const imageRef = useRef(null)
   const shouldPrioritize = loading === 'eager'
-    || (loading === 'desktop' && typeof window !== 'undefined' && window.matchMedia('(min-width: 900px)').matches)
+    || (loading === 'desktop' && isDesktop)
+
+  useEffect(() => {
+    if (loading !== 'desktop') {
+      return undefined
+    }
+
+    const desktopQuery = window.matchMedia('(min-width: 900px)')
+    const updateDesktopState = () => setIsDesktop(desktopQuery.matches)
+
+    updateDesktopState()
+    desktopQuery.addEventListener('change', updateDesktopState)
+
+    return () => desktopQuery.removeEventListener('change', updateDesktopState)
+  }, [loading])
+
+  useEffect(() => {
+    const image = imageRef.current
+
+    if (image?.complete) {
+      setStatus(image.naturalWidth > 0 ? 'loaded' : 'error')
+    }
+  }, [])
 
   return (
     <div
@@ -17,6 +41,7 @@ function VisualAsset({ asset, className = '', imageClassName = '', children, loa
       </div>
       {status !== 'error' && (
         <img
+          ref={imageRef}
           className={`visual-asset__image ${imageClassName}`.trim()}
           src={asset.src}
           srcSet={asset.srcSet}
