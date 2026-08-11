@@ -6,7 +6,7 @@ import { navigation, visualAssets, whatsappUrl } from '../data/siteContent'
 function Brand() {
   return (
     <a className="brand" href="#inicio" aria-label="Noi Pizzería, ir al inicio">
-      <VisualAsset asset={visualAssets.logo} className="brand__asset">
+      <VisualAsset asset={visualAssets.headerLogo} className="brand__asset" loading="eager">
         <span className="brand__mark"><span>N</span></span>
         <span className="brand__text"><strong>NOI</strong><small>PIZZERÍA</small></span>
       </VisualAsset>

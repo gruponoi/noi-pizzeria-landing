@@ -1,7 +1,9 @@
 import { useState } from 'react'
 
-function VisualAsset({ asset, className = '', imageClassName = '', children, eager = false }) {
+function VisualAsset({ asset, className = '', imageClassName = '', children, loading = 'lazy' }) {
   const [status, setStatus] = useState('loading')
+  const shouldPrioritize = loading === 'eager'
+    || (loading === 'desktop' && typeof window !== 'undefined' && window.matchMedia('(min-width: 900px)').matches)
 
   return (
     <div
@@ -17,9 +19,13 @@ function VisualAsset({ asset, className = '', imageClassName = '', children, eag
         <img
           className={`visual-asset__image ${imageClassName}`.trim()}
           src={asset.src}
+          srcSet={asset.srcSet}
+          sizes={asset.sizes}
+          width={asset.width}
+          height={asset.height}
           alt={asset.alt}
-          loading={eager ? 'eager' : 'lazy'}
-          fetchPriority={eager ? 'high' : 'auto'}
+          loading={shouldPrioritize ? 'eager' : 'lazy'}
+          fetchPriority={shouldPrioritize ? 'high' : 'auto'}
           decoding="async"
           onLoad={() => setStatus('loaded')}
           onError={() => setStatus('error')}

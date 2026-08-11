@@ -1,7 +1,7 @@
 import SectionHeading from './SectionHeading'
 
 const trustBenefits = [
-  { icon: '🍕', label: 'Masa de fermentación lenta · 48 h' },
+  { icon: '🍕', label: 'Masa de fermentación lenta' },
   { icon: '🧀', label: 'Mozzarella gratinada en cada pizza' },
   { icon: '🔥', label: 'Cocción en horno de piedra refractaria' },
   { icon: '🚚', label: 'Delivery coordinado en Loja' },

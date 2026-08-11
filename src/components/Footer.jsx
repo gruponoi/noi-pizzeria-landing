@@ -18,7 +18,7 @@ function Footer() {
           <small>Porque Loja se lo merece.</small>
         </div>
         <div><h3>Explora</h3>{navigation.slice(0, 4).map((item) => <a key={item.href} href={item.href}>{item.label}</a>)}</div>
-        <div><h3>Servicio</h3><p>Delivery en Loja</p><p>Hasta las 22:00</p><p>Envío según ubicación</p></div>
+        <div><h3>Servicio</h3><p>Delivery en Loja</p><p>Hasta las 22:30</p><p>Envío según ubicación</p></div>
         <div><h3>Pedidos</h3><WhatsAppLink ctaLocation="footer" ctaLabel="Contacto de pedidos" href={whatsappUrl} target="_blank" rel="noreferrer">+{whatsappNumber.slice(0, 3)} {whatsappNumber.slice(3, 6)} {whatsappNumber.slice(6, 9)} {whatsappNumber.slice(9)}</WhatsAppLink><p>Solo atención por delivery</p></div>
       </div>
       <div className="container footer__bottom"><span>© {new Date().getFullYear()} Noi Pizzería</span><span>Hecho con sabor en Loja, Ecuador.</span></div>

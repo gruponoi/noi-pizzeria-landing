@@ -5,41 +5,68 @@ export const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComp
 export const visualAssets = {
   logo: {
     src: '/imagenes/logo-noi.png',
+    width: 512,
+    height: 512,
+    alt: 'Logotipo oficial de Noi Pizzería',
+    placeholder: 'Logo oficial pendiente',
+  },
+  headerLogo: {
+    src: '/imagenes/logo-noi-header.webp',
+    width: 256,
+    height: 256,
     alt: 'Logotipo oficial de Noi Pizzería',
     placeholder: 'Logo oficial pendiente',
   },
   hero: {
-    src: '/imagenes/hero-pepperoni.webp',
+    src: '/imagenes/hero-pepperoni-960.webp',
+    srcSet: '/imagenes/hero-pepperoni-640.webp 640w, /imagenes/hero-pepperoni-960.webp 960w, /imagenes/hero-pepperoni.webp 1440w',
+    sizes: '(min-width: 900px) 50vw, calc(100vw - 2rem)',
+    width: 1440,
+    height: 960,
     alt: 'Pizza de pepperoni de Noi Pizzería recién horneada',
     placeholder: 'Fotografía hero pendiente',
   },
   promotion: {
-    src: '/imagenes/promo-1299.webp',
+    src: '/imagenes/promo-1299-768.webp',
+    srcSet: '/imagenes/promo-1299-480.webp 480w, /imagenes/promo-1299-768.webp 768w, /imagenes/promo-1299.webp 1200w',
+    sizes: '(min-width: 900px) 40vw, (min-width: 620px) calc(100vw - 9rem), calc(100vw - 4.8rem)',
+    width: 1200,
+    height: 800,
     alt: 'Promoción de Noi Pizzería con dos pizzas medianas y gaseosa de un litro por 12 dólares con 99 centavos',
     placeholder: 'Fotografía de promoción pendiente',
   },
   pepperoni: {
     src: '/imagenes/pepperoni.webp',
+    width: 1200,
+    height: 800,
     alt: 'Pizza de pepperoni con abundante queso de Noi Pizzería',
     placeholder: 'Fotografía de pepperoni pendiente',
   },
   hawaiian: {
     src: '/imagenes/hawaiana.webp',
+    width: 1200,
+    height: 800,
     alt: 'Pizza hawaiana con jamón, piña y queso de Noi Pizzería',
     placeholder: 'Fotografía de hawaiana pendiente',
   },
   ham: {
     src: '/imagenes/jamon.webp',
+    width: 1200,
+    height: 800,
     alt: 'Pizza de jamón y queso de Noi Pizzería',
     placeholder: 'Fotografía de jamón pendiente',
   },
   bacon: {
     src: '/imagenes/tocino.webp',
+    width: 1200,
+    height: 800,
     alt: 'Pizza con tocino crocante de Noi Pizzería',
     placeholder: 'Fotografía de tocino pendiente',
   },
   productionCenter: {
     src: '/imagenes/centro-produccion.webp',
+    width: 1280,
+    height: 853,
     alt: 'Centro de producción de Noi Pizzería en Loja',
     placeholder: 'Fotografía del centro de producción pendiente',
   },
@@ -54,10 +81,10 @@ export const navigation = [
 ]
 
 export const flavors = [
-  { name: 'Pepperoni', description: '42 pepperonis perfectamente distribuidos sobre abundante mozzarella gratinada.', accent: 'pepperoni', icon: '●', image: visualAssets.pepperoni },
+  { name: 'Pepperoni', description: 'Generosa porción de pepperoni sobre abundante mozzarella gratinada.', accent: 'pepperoni', icon: '●', image: visualAssets.pepperoni },
   { name: 'Hawaiana', description: 'Jamón de calidad, piña dulce y mozzarella gratinada en cada porción.', accent: 'hawaiian', icon: '◆', image: visualAssets.hawaiian },
-  { name: 'Jamón', description: 'Jamón seleccionado, abundante queso y una masa suave por dentro, crujiente por fuera.', accent: 'ham', icon: '■', image: visualAssets.ham },
-  { name: 'Tocino', description: 'Tocino crujiente, mozzarella gratinada y un sabor intenso en cada bocado.', accent: 'bacon', icon: '≈', image: visualAssets.bacon },
+  { name: 'Jamón', description: 'Jamón seleccionado, mozzarella gratinada y una masa suave por dentro y crujiente por fuera.', accent: 'ham', icon: '■', image: visualAssets.ham },
+  { name: 'Tocino', description: 'Tocino ahumado, mozzarella gratinada y un sabor intenso en cada bocado.', accent: 'bacon', icon: '≈', image: visualAssets.bacon },
 ]
 
 export const testimonials = [
@@ -93,7 +120,7 @@ export const faqs = [
   },
   {
     question: '¿Hasta qué hora atienden?',
-    answer: 'Recibimos pedidos hasta las 22:00. Te recomendamos escribirnos con anticipación para coordinar tu entrega.',
+    answer: 'Recibimos pedidos hasta las 22:30. Te recomendamos escribirnos con anticipación para coordinar tu entrega.',
   },
   {
     question: '¿Cómo hago mi pedido?',

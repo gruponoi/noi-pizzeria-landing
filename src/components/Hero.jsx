@@ -4,7 +4,7 @@ import { visualAssets, whatsappUrl } from '../data/siteContent'
 
 function PizzaArtwork() {
   return (
-    <VisualAsset asset={visualAssets.hero} className="pizza-stage" imageClassName="pizza-stage__photo" eager>
+    <VisualAsset asset={visualAssets.hero} className="pizza-stage" imageClassName="pizza-stage__photo" loading="desktop">
       <div className="pizza-stage__glow" />
       <div className="pizza-stage__plate">
         <div className="pizza-illustration" aria-hidden="true">
@@ -43,7 +43,7 @@ function Hero() {
           </ul>
           <div className="hero__meta" aria-label="Información del servicio">
             <span><i aria-hidden="true">⌖</i> Delivery en Loja</span>
-            <span><i aria-hidden="true">◷</i> Hasta las 22:00</span>
+            <span><i aria-hidden="true">◷</i> Hasta las 22:30</span>
           </div>
         </div>
         <PizzaArtwork />
